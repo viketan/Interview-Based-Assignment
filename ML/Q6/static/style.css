@@ -1,0 +1,73 @@
+body {
+  background-color: black;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  min-width: inherit !important;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Add transition effect */
+}
+
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+}
+
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.Y {
+  color: green;
+  font-size: 1rem;
+}
+
+.N {
+  color: red;
+  font-size: 1rem;
+};

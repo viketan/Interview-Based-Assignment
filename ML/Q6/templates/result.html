@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Eligibility Result</title>
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Eligibility Result</h1>
+    <div id="result" class="result">
+    </div>
+  </div>
+  <script>
+    const result = document.getElementById("result");
+    const eligibilityStatus = "{{ eligibility_status }}"
+    const applicantName = "{{ name }}";
+    result.innerHTML = `
+    <p>${ eligibilityStatus === "Y" ? 'Congratulations' : 'Sorry'}, <span class="capitalize">${applicantName}</span>!</p>
+      <p>Your loan eligibility status:</p>
+      <p class=${eligibilityStatus}>${eligibilityStatus}</p>
+    `
+  </script>
+</body>
+</html>
