@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Genre Prediction - Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-image: url("static/background.jpg"); /* Replace "background.jpg" with the path to your image */
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    p {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Genre Prediction Result</h1>
+    <p>The predicted genre is: {{ genre }}</p>
+  </div>
+</body>
+</html>

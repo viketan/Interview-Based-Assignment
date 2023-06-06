@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Genre Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-image: url("static/background.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    h1 {
+      text-align: center;
+      color: black;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Genre Prediction</h1>
+    <form action="/predict" method="post">
+      <div class="form-group">
+        <label for="tempo">Tempo:</label>
+        <input type="number" id="tempo" name="tempo" required>
+      </div>
+      <div class="form-group">
+        <label for="beats">Beats:</label>
+        <input type="number" id="beats" name="beats" required>
+      </div>
+      <div class="form-group">
+        <label for="chroma_stft">Chroma stft</label>
+        <input type="number" id="chroma_stft" name="chroma_stft" required>
+      </div>
+      <div class="form-group">
+        <label for="rmse">Rmse:</label>
+        <input type="number" id="rmse" name="rmse" required>
+      </div>
+      <div class="form-group">
+        <label for="spectral_centroid">Spectral Centroid:</label>
+        <input type="number" id="spectral_centroid" name="spectral_centroid" required>
+      </div>
+      <div class="form-group">
+        <label for="spectral_bandwidth">Spectral Bandwidth:</label>
+        <input type="number" id="spectral_bandwidth" name="spectral_bandwidth" required>
+      </div>
+      <div class="form-group">
+        <label for="rolloff">Rolloff:</label>
+        <input type="number" id="rolloff" name="rolloff" required>
+      </div>
+      <div class="form-group">
+        <label for="zero_crossing_rate">Zero crossing rate:</label>
+        <input type="number" id="zero_crossing_rate" name="zero_crossing_rate" required>
+      </div>
+      <div class="form-group">
+        <label for="mfcc1">mfcc1:</label>
+        <input type="number" id="mfcc1" name="mfcc1" required>
+      </div>
+      <div class="form-group">
+        <label for="mfcc2">mfcc2:</label>
+        <input type="number" id="mfcc2" name="mfcc2" required>
+      </div>
+      <div class="form-group">
+        <label for="mfcc3">mfcc3:</label>
+        <input type="number" id="mfcc3" name="mfcc3" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc4">mfcc4:</label>
+          <input type="number" id="mfcc4" name="mfcc4" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc5">mfcc4:</label>
+          <input type="number" id="mfcc5" name="mfcc5" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc6">mfcc6:</label>
+          <input type="number" id="mfcc6" name="mfcc6" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc7">mfcc7:</label>
+          <input type="number" id="mfcc7" name="mfcc7" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc8">mfcc8:</label>
+          <input type="number" id="mfcc8" name="mfcc8" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc9">mfcc9:</label>
+          <input type="number" id="mfcc9" name="mfcc9" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc10">mfcc10:</label>
+          <input type="number" id="mfcc10" name="mfcc10" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc11">mfcc11:</label>
+          <input type="number" id="mfcc11" name="mfcc11" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc12">mfcc12:</label>
+          <input type="number" id="mfcc12" name="mfcc12" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc13">mfcc13:</label>
+          <input type="number" id="mfcc13" name="mfcc13" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc14">mfcc14:</label>
+          <input type="number" id="mfcc14" name="mfcc14" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc15">mfcc15:</label>
+          <input type="number" id="mfcc15" name="mfcc15" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc16">mfcc16:</label>
+          <input type="number" id="mfcc16" name="mfcc16" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc17">mfcc17:</label>
+          <input type="number" id="mfcc17" name="mfcc17" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc18">mfcc18:</label>
+          <input type="number" id="mfcc18" name="mfcc18" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc19">mfcc19:</label>
+          <input type="number" id="mfcc19" name="mfcc19" required>
+        </div>
+        <div class="form-group">
+          <label for="mfcc20">mfcc20:</label>
+          <input type="number" id="mfcc20" name="mfcc20" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Predict Genre">
+        </div>
+    </form>
+  </div>
+</body>
+</html>
